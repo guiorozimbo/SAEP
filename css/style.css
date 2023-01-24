@@ -5,12 +5,19 @@
   font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .header{
-  margin: auto;
- text-align:right;
+ text-align:center;
+ display:flex;
+ align-content: space-around;
+  padding: 1rem;
+  align-content: center;
+ justify-content:space-between;
+ 
 }
-h3{
-  margin: auto;
-  text-align: left;
+.nav::after{
+  font-size: 1.1rem;
+  word-spacing: 5px ;
+  text-decoration: none;
+ position:relative;
 }
 /*.images-section{
 
