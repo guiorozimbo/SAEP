@@ -4,7 +4,17 @@
   box-sizing: border-box;
   font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.header{
+  margin: auto;
+ text-align:right;
+}
+h3{
+  margin: auto;
+  text-align: left;
+}
+/*.images-section{
 
+}*/
 .footer{
   background-color: black;
   color: white;
