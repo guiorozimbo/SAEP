@@ -7,31 +7,40 @@
   <title>SAEP</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
   <header id="header">
-    <h1>VESTE VC</h1>
-<nav class="menu-header">
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link"  href="#index.html">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#favorito.html">Favoritos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#login.html">Login</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/img/veste-white.png" alt="Logo VESTE VC" height="36">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ms-center">
+          <li class="nav-item">
+            <a class="nav-link"  href="#index.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#favorito.html">Favoritos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#login.html">Login</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <section>
     <div class="images-section">
       <img src="/img/produtos/Zumbi Jean.jpg" alt="Homem negro de calça jeans Zumbi a marca com meias brancas com tênis" width="500">
-      <img src="/icons/like.svg">
-      <img src="/icons/deslike.svg">
-      <img src="/icons/favorite.svg" alt="">
+      <img src="/icons/like.svg" class="fa-stack fa-lg" >
+      <img src="/icons/deslike.svg" class="favs">
+      <img src="/icons/favorite.svg" class="favs">
 
       <img src="/img/produtos/Martin Jean.jpg" alt="Calça de tecido Martin" width="500">
       <img src="/icons/like.svg">
@@ -62,6 +71,5 @@
       &copy; 2022 / Todos os Direitos Reservados
     </div>
   </footer>
-
 </body>
 </html>

@@ -7,14 +7,13 @@
 body, section, main, div {
   border: solid;
 }
+
 #header{
  /*align-content: space-around;*/
-  padding: 0.5rem;
+
  justify-content:space-between;
 }
-.images-section{
-  
-}
+
 /*.nav::after{
   font-size: 1.1rem;
   word-spacing: 5px ;
@@ -28,7 +27,8 @@ body, section, main, div {
  text-decoration: none;
 }*/
 .footer{
+  font-weight: 700;
   background-color: black;
   color: white;
-  text-align: left;
+  text-align:center;
 }
