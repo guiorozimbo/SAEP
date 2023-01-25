@@ -4,26 +4,29 @@
   box-sizing: border-box;
   font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.header{
- text-align:center;
- display:flex;
- align-content: space-around;
-  padding: 1rem;
-  align-content: center;
- justify-content:space-between;
- 
+body section {
+  border: solid;
 }
-.nav::after{
+#header{
+ /*align-content: space-around;*/
+  padding: 0.5rem;
+ justify-content:space-between;
+}
+.na
+/*.nav::after{
   font-size: 1.1rem;
   word-spacing: 5px ;
-  text-decoration: none;
- position:relative;
-}
-/*.images-section{
-
+}*/
+/*.nav{
+  margin-right: auto;
+}*/
+/*.ul a{
+  justify-content: center;
+ 
+ text-decoration: none;
 }*/
 .footer{
   background-color: black;
   color: white;
-  text-align: center;
+  text-align: left;
 }
