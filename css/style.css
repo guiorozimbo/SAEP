@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body section {
+body, section, main, div {
   border: solid;
 }
 #header{
@@ -12,7 +12,9 @@ body section {
   padding: 0.5rem;
  justify-content:space-between;
 }
-.na
+.images-section{
+  
+}
 /*.nav::after{
   font-size: 1.1rem;
   word-spacing: 5px ;
