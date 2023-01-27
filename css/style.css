@@ -4,8 +4,8 @@
   box-sizing: border-box;
   font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body, section, main,.div-imgs {
-  border: solid;
+.div-imgs {
+  background-color: black;
 }
 
 #header{
