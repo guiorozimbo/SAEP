@@ -4,18 +4,6 @@
   box-sizing: border-box;
   font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.column {
-float: left;
-width: 50%;
-}
-.div-col2{
-  float: left;
-width: 25%;
-}
-.div-col3{
-  float: left;
-  width: 15%;
-}
 
 footer{
   height: auto;
@@ -25,6 +13,7 @@ footer{
   color: white;
   text-align:center;
 }
+
 .footer-top{
   display: flex;
   align-items: center;
@@ -37,6 +26,120 @@ footer{
   padding: 30px 0;
   text-align: left;
 }
-.footer-btn p{
+.footer-btn #p{
   font-size: 14px;
+}
+.line {
+ width: 100%;
+ height: 2px;
+ background-color: white;
+ margin-bottom: 2rem;
+ margin-top: 2rem;
+}
+
+.favs-column{
+  display:flex;
+  position:absolute;
+  width: 100%;
+ bottom: 0;
+ justify-content:right;
+ 
+ padding: 20px;
+ color: white;
+ background-color: rgba(0,0,0,0.5);
+}
+.favs-column2 {
+  
+  display:flex;
+  position:absolute;
+  width: 100%;
+ bottom: 0;
+ justify-content:right;
+ 
+ padding: 20px;
+ color: white;
+ background-color: rgba(0,0,0,0.5);
+
+}
+.column {
+  position: relative;
+  padding-bottom: 1rem;
+  background-color: black;
+  float: left;
+  width: 50%;
+}
+
+.coluna2{
+  position: relative;
+  border-color: white;
+  border-style: solid;
+border-width: 10px;
+    float: left;
+  width: 25%;
+}
+#p-favs2{
+  margin: 0;
+  text-align: left;
+  margin-right: auto;
+}
+#p-favs3{
+  margin: 0;
+  text-align: left;
+  margin-right: auto;
+}
+/*colors buttons likes */
+
+.like-count,
+.dislike-count,
+.heart-count {
+  margin: auto 0;
+}
+
+.like-container,
+.dislike-container,
+.heart-container
+ {
+  cursor: pointer;
+}
+.div-col3{
+ 
+  position: relative;
+  border-color: white;
+  border-style: solid;
+border-width: 10px;
+  float: left;
+  width: 33.33%;
+}
+.row1{
+  content: "";
+  clear: both;
+  display: table;
+}
+.favs{
+  align-items: center;
+}
+
+@media screen and (max-width:500px){
+  .colum{
+    width: 100%;
+  }
+}
+
+.teste{
+font-family:'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin-top: 40px;
+}
+#tela-login{
+  left: -15%;
+  right: 90%;
+  width: 80%;
+  margin: 0 auto;
+  width: 140%;
+  height: 80%;
+}
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 100%;
+    height: 100%;
+  }
 }
