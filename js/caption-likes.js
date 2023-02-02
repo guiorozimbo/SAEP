@@ -21,8 +21,20 @@ DislikeContainers.forEach(likeContainer => {
 });
 
 
+const likeButtons = document.querySelectorAll('.like-container');
+const dislikeButtons = document.querySelectorAll('.dislike-container');
+
+likeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+  });
+});
+
+dislikeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    button.classList.toggle('active');
+  });
+});
 
 
-
-  
   

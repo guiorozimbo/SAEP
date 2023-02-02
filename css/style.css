@@ -13,6 +13,17 @@ footer{
   color: white;
   text-align:center;
 }
+#img-nav{
+position: absolute;
+margin-right: auto;
+}
+#menu{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+button.btn {
+  width: 48%;
+}
 
 .footer-top{
   display: flex;
@@ -88,10 +99,32 @@ border-width: 10px;
   margin-right: auto;
 }
 /*colors buttons likes */
+/*.fa-thumbs-up,
+.fa-heart {
+  color: white;
+  
+  filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
+  transition: all 0.3s;
+}*/
+
+/*.fa-thumbs-up img.liked:hover {
+  filter: invert(15%) sepia(98%) saturate(6419%) hue-rotate(359deg) brightness(97%) contrast(114%);
+  
+}*/
+.like-container .active {
+  transform:calc(all 0.3s);
+  color: red;
+}
+
+.dislike-container .active {
+  color: red;
+}
 
 .like-count,
 .dislike-count,
 .heart-count {
+  font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  color: white;
   margin: auto 0;
 }
 
@@ -99,6 +132,7 @@ border-width: 10px;
 .dislike-container,
 .heart-container
  {
+  color: white;
   cursor: pointer;
 }
 .div-col3{
@@ -130,12 +164,12 @@ font-family:'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 margin-top: 40px;
 }
 #tela-login{
-  left: -15%;
+  left: -20%;
   right: 90%;
   width: 80%;
   margin: 0 auto;
-  width: 140%;
-  height: 80%;
+  width: 150%;
+  height: 90%;
 }
 @media screen and (max-width: 600px) {
   .modal-content {

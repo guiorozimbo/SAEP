@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#img-nav{
+  position: absolute;
+  margin-right: auto;
+  }
+  #menu{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
