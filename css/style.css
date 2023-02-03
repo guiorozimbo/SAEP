@@ -12,6 +12,9 @@ footer{
   background-color: black;
   color: white;
   text-align:center;
+  bottom: 0;
+  clear: both;
+  position: relative;
 }
 #img-nav{
 position: absolute;
@@ -111,14 +114,14 @@ border-width: 10px;
   filter: invert(15%) sepia(98%) saturate(6419%) hue-rotate(359deg) brightness(97%) contrast(114%);
   
 }*/
-.like-container .active {
-  transform:calc(all 0.3s);
-  color: red;
+
+.like-container.selected .like-img,
+.dislike-container.selected .dislike-img,
+.heart-container.selected .heart-img {
+  filter: invert(21%) sepia(87%) saturate(6562%) hue-rotate(356deg) brightness(100%) contrast(117%);
 }
 
-.dislike-container .active {
-  color: red;
-}
+
 
 .like-count,
 .dislike-count,

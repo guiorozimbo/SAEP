@@ -20,21 +20,76 @@ DislikeContainers.forEach(likeContainer => {
   });
 });
 
+const HeartContainers = document.querySelectorAll(".heart-container");
 
-const likeButtons = document.querySelectorAll('.like-container');
-const dislikeButtons = document.querySelectorAll('.dislike-container');
-
-likeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('active');
+HeartContainers.forEach(likeContainer => {
+  likeContainer.addEventListener("click", function() {
+    const HeartCount = likeContainer.querySelector(".heart-count");
+    let  HeartCountValue = parseInt(DislikeCount.innerHTML, 10);
+   HeartCountValue++;
+    HeartCount.innerHTML =  HeartCountValue;
   });
 });
 
-dislikeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    button.classList.toggle('active');
-  });
+
+
+const likeContainer = document.querySelector('.like-container');
+const dislikeContainer = document.querySelector('.dislike-container');
+const heartContainer = document.querySelector('.heart-container');
+
+likeContainer.addEventListener('click', function () {
+  likeContainer.classList.toggle('selected');
+  dislikeContainer.classList.remove('selected');
+  heartContainer.classList.remove('selected');
 });
+
+dislikeContainer.addEventListener('click', function () {
+  dislikeContainer.classList.toggle('selected');
+  likeContainer.classList.remove('selected');
+  heartContainer.classList.remove('selected');
+});
+
+heartContainer.addEventListener('click', function () {
+  heartContainer.classList.toggle('selected');
+  likeContainer.classList.remove('selected');
+  dislikeContainer.classList.remove('selected');
+});
+
+/*const likeContainerz = document.querySelector('.like-container');
+const dislikeContainerz = document.querySelector('.dislike-container');
+const heartContainerz = document.querySelector('.heart-container');
+let isLikeSelected = false;
+let isDislikeSelected = false;
+let isHeartSelected = false;
+
+likeContainerz.addEventListener('click', function () {
+  isLikeSelected = !isLikeSelected;
+  likeContainerz.classList.toggle('selected', isLikeSelected);
+  dislikeContainerz.classList.remove('selected');
+  isDislikeSelected = false;
+  heartContainerz.classList.remove('selected');
+  isHeartSelected = false;
+});
+
+dislikeContainerz.addEventListener('click', function () {
+  isDislikeSelected = !isDislikeSelected;
+  dislikeContainerz.classList.toggle('selected', isDislikeSelected);
+  likeContainerz.classList.remove('selected');
+  isLikeSelected = false;
+  heartContainerz.classList.remove('selected');
+  isHeartSelected = false;
+});
+
+heartContainerz.addEventListener('click', function () {
+  isHeartSelected = !isHeartSelected;
+  heartContainerz.classList.toggle('selected', isHeartSelected);
+  likeContainerz.classList.remove('selected');
+  isLikeSelected = false;
+  dislikeContainerz.classList.remove('selected');
+  isDislikeSelected = false;
+};*/
+
+
 
 
   
