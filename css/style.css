@@ -101,27 +101,35 @@ border-width: 10px;
   text-align: left;
   margin-right: auto;
 }
-/*colors buttons likes */
-/*.fa-thumbs-up,
-.fa-heart {
-  color: white;
-  
-  filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(254deg) brightness(110%) contrast(110%);
-  transition: all 0.3s;
-}*/
+
 
 /*.fa-thumbs-up img.liked:hover {
   filter: invert(15%) sepia(98%) saturate(6419%) hue-rotate(359deg) brightness(97%) contrast(114%);
   
 }*/
 
-.like-container.selected .like-img,
-.dislike-container.selected .dislike-img,
-.heart-container.selected .heart-img {
+.like-img,
+.dislike-img,
+.heart-img {
+  filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(347deg) brightness(107%) contrast(100%);
+  
+}
+.like-img:hover,
+.dislike-img:hover,
+.heart-img:hover {
+  filter: invert(21%) sepia(87%) saturate(6562%) hue-rotate(356deg) brightness(100%) contrast(117%);
+}
+.liked .like-img {
   filter: invert(21%) sepia(87%) saturate(6562%) hue-rotate(356deg) brightness(100%) contrast(117%);
 }
 
+.disliked .dislike-img {
+  filter: invert(21%) sepia(87%) saturate(6562%) hue-rotate(356deg) brightness(100%) contrast(117%);
+}
 
+.hearted .heart-img {
+  filter: invert(21%) sepia(87%) saturate(6562%) hue-rotate(356deg) brightness(100%) contrast(117%);
+}
 
 .like-count,
 .dislike-count,
@@ -129,13 +137,13 @@ border-width: 10px;
   font-family: 'Segoe UI','Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
   color: white;
   margin: auto 0;
+  
 }
 
 .like-container,
 .dislike-container,
 .heart-container
  {
-  color: white;
   cursor: pointer;
 }
 .div-col3{

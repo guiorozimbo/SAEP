@@ -42,10 +42,17 @@
   .line {
    width: 100%;
    height: 2px;
-   background-color: white;
+   background-color: rgb(255, 255, 255);
    margin-bottom: 2rem;
    margin-top: 2rem;
   }
+  .line2 {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(78, 77, 77);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+   }
   footer{
     height: auto;
     width: 100vw;

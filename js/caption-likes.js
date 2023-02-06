@@ -33,61 +33,93 @@ HeartContainers.forEach(likeContainer => {
 
 
 
-const likeContainer = document.querySelector('.like-container');
-const dislikeContainer = document.querySelector('.dislike-container');
-const heartContainer = document.querySelector('.heart-container');
+const likeContainersz = document.querySelectorAll('.like-container');
+const dislikeContainers = document.querySelectorAll('.dislike-container');
+const heartContainers = document.querySelectorAll('.heart-container');
 
-likeContainer.addEventListener('click', function () {
-  likeContainer.classList.toggle('selected');
-  dislikeContainer.classList.remove('selected');
-  heartContainer.classList.remove('selected');
+const toggleSelected = (element, className) => {
+  element.classList.toggle(className);
+};
+
+const removeSelected = (element, className) => {
+  element.classList.remove(className);
+};
+
+likeContainersz.forEach(container => {
+  container.addEventListener('click', function () {
+    toggleSelected(container, 'selected');
+    dislikeContainers.forEach(dislikeContainer => removeSelected(dislikeContainer, 'selected'));
+    heartContainers.forEach(heartContainer => removeSelected(heartContainer, 'selected'));
+  });
 });
 
-dislikeContainer.addEventListener('click', function () {
-  dislikeContainer.classList.toggle('selected');
-  likeContainer.classList.remove('selected');
-  heartContainer.classList.remove('selected');
+dislikeContainers.forEach(container => {
+  container.addEventListener('click', function () {
+    toggleSelected(container, 'selected');
+    likeContainersz.forEach(likeContainer => removeSelected(likeContainer, 'selected'));
+    heartContainers.forEach(heartContainer => removeSelected(heartContainer, 'selected'));
+  });
 });
 
-heartContainer.addEventListener('click', function () {
-  heartContainer.classList.toggle('selected');
-  likeContainer.classList.remove('selected');
-  dislikeContainer.classList.remove('selected');
+heartContainers.forEach(container => {
+  container.addEventListener('click', function () {
+    toggleSelected(container, 'selected');
+    likeContainersz.forEach(likeContainer => removeSelected(likeContainer, 'selected'));
+    dislikeContainers.forEach(dislikeContainer => removeSelected(dislikeContainer, 'selected'));
+  });
 });
 
-/*const likeContainerz = document.querySelector('.like-container');
-const dislikeContainerz = document.querySelector('.dislike-container');
-const heartContainerz = document.querySelector('.heart-container');
-let isLikeSelected = false;
-let isDislikeSelected = false;
-let isHeartSelected = false;
+const buttons = document.querySelectorAll(".fa-thumbs-up");
 
-likeContainerz.addEventListener('click', function () {
-  isLikeSelected = !isLikeSelected;
-  likeContainerz.classList.toggle('selected', isLikeSelected);
-  dislikeContainerz.classList.remove('selected');
-  isDislikeSelected = false;
-  heartContainerz.classList.remove('selected');
-  isHeartSelected = false;
+let liked = false;
+let disliked = false;
+let hearted = false;
+
+buttons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    const container = this.parentNode;
+    const count = container.querySelector(".like-count");
+
+    if (container.classList.contains("like-container")) {
+      if (!liked) {
+        container.classList.add("liked");
+        liked = true;
+        disliked = false;
+        hearted = false;
+        count.innerHTML = parseInt(count.innerHTML) + 1;
+      } else {
+        container.classList.remove("liked");
+        liked = false;
+        count.innerHTML = parseInt(count.innerHTML) - 1;
+      }
+    } else if (container.classList.contains("dislike-container")) {
+      if (!disliked) {
+        container.classList.add("disliked");
+        disliked = true;
+        liked = false;
+        hearted = false;
+        count.innerHTML = parseInt(count.innerHTML) + 1;
+      } else {
+        container.classList.remove("disliked");
+        disliked = false;
+        count.innerHTML = parseInt(count.innerHTML) - 1;
+      }
+    } else if (container.classList.contains("heart-container")) {
+      if (!hearted) {
+        container.classList.add("hearted");
+        hearted = true;
+        liked = false;
+        disliked = false;
+        count.innerHTML = parseInt(count.innerHTML) + 1;
+      } else {
+        container.classList.remove("hearted");
+        hearted = false;
+        count.innerHTML = parseInt(count.innerHTML) - 1;
+      }
+    }
+  });
 });
 
-dislikeContainerz.addEventListener('click', function () {
-  isDislikeSelected = !isDislikeSelected;
-  dislikeContainerz.classList.toggle('selected', isDislikeSelected);
-  likeContainerz.classList.remove('selected');
-  isLikeSelected = false;
-  heartContainerz.classList.remove('selected');
-  isHeartSelected = false;
-});
-
-heartContainerz.addEventListener('click', function () {
-  isHeartSelected = !isHeartSelected;
-  heartContainerz.classList.toggle('selected', isHeartSelected);
-  likeContainerz.classList.remove('selected');
-  isLikeSelected = false;
-  dislikeContainerz.classList.remove('selected');
-  isDislikeSelected = false;
-};*/
 
 
 
