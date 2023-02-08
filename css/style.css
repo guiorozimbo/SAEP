@@ -114,11 +114,12 @@ border-width: 10px;
   filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(347deg) brightness(107%) contrast(100%);
   
 }
-.like-img:hover,
+.like-img:hover.liked,
 .dislike-img:hover,
 .heart-img:hover {
   filter: invert(21%) sepia(87%) saturate(6562%) hue-rotate(356deg) brightness(100%) contrast(117%);
 }
+
 .liked .like-img {
   filter: invert(21%) sepia(87%) saturate(6562%) hue-rotate(356deg) brightness(100%) contrast(117%);
 }

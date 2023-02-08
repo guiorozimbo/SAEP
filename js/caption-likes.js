@@ -33,7 +33,7 @@ HeartContainers.forEach(likeContainer => {
 
 
 
-const likeContainersz = document.querySelectorAll('.like-container');
+/*const likeContainersz = document.querySelectorAll('.like-container');
 const dislikeContainers = document.querySelectorAll('.dislike-container');
 const heartContainers = document.querySelectorAll('.heart-container');
 
@@ -67,7 +67,7 @@ heartContainers.forEach(container => {
     likeContainersz.forEach(likeContainer => removeSelected(likeContainer, 'selected'));
     dislikeContainers.forEach(dislikeContainer => removeSelected(dislikeContainer, 'selected'));
   });
-});
+});*/
 
 const buttons = document.querySelectorAll(".fa-thumbs-up");
 
@@ -79,6 +79,8 @@ buttons.forEach(function(button) {
   button.addEventListener("click", function() {
     const container = this.parentNode;
     const count = container.querySelector(".like-count");
+    const counti = container.querySelector(".dislike-count");
+    const countin = container.querySelector(".dislike-count");
 
     if (container.classList.contains("like-container")) {
       if (!liked) {
@@ -86,35 +88,39 @@ buttons.forEach(function(button) {
         liked = true;
         disliked = false;
         hearted = false;
-        count.innerHTML = parseInt(count.innerHTML) + 1;
-      } else {
+        count.innerHTML = parseInt(count.innerHTML) ;
+      } 
+      else {
         container.classList.remove("liked");
         liked = false;
         count.innerHTML = parseInt(count.innerHTML) - 1;
       }
-    } else if (container.classList.contains("dislike-container")) {
+    }
+
+    else if (container.classList.contains("dislike-container")) {
       if (!disliked) {
         container.classList.add("disliked");
         disliked = true;
         liked = false;
         hearted = false;
-        count.innerHTML = parseInt(count.innerHTML) + 1;
+        counti.innerHTML = parseInt(counti.innerHTML) ;
       } else {
         container.classList.remove("disliked");
         disliked = false;
-        count.innerHTML = parseInt(count.innerHTML) - 1;
+        counti.innerHTML = parseInt(counti.innerHTML) - 1;
       }
-    } else if (container.classList.contains("heart-container")) {
+    } 
+    else if (container.classList.contains("heart-container")) {
       if (!hearted) {
         container.classList.add("hearted");
         hearted = true;
         liked = false;
         disliked = false;
-        count.innerHTML = parseInt(count.innerHTML) + 1;
+        countin.innerHTML = parseInt(countin.innerHTML) ;
       } else {
         container.classList.remove("hearted");
         hearted = false;
-        count.innerHTML = parseInt(count.innerHTML) - 1;
+        countin.innerHTML = parseInt(countin.innerHTML) - 1;
       }
     }
   });
