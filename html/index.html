@@ -396,6 +396,7 @@
     </div>
     <script src="/js/caption-likes.js"></script>
     <script src="/js/Firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js""></script>
   </main>
 
   <footer >
@@ -407,6 +408,25 @@
      <p id="p"> &copy; 2022 / Todos os Direitos Reservados</p>
     </div>
   </footer>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyARxkZQRmw1Ti9I2_SgFioIYUz8TxcfAO0",
+      authDomain: "saep-90dbe.firebaseapp.com",
+      projectId: "saep-90dbe",
+      storageBucket: "saep-90dbe.appspot.com",
+      messagingSenderId: "460850038429",
+      appId: "1:460850038429:web:bd58df2369924f2a0cf674"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </body>
 
 </header>
